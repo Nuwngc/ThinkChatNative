@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/bg" android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout android:gravity="center_vertical" android:padding="18dp" android:background="@color/panel" android:layout_width="match_parent" android:layout_height="64dp">
+<TextView android:text="ThinkChat" android:textColor="@color/text" android:textStyle="bold" android:textSize="23sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+<Button android:id="@+id/profile" android:text="Tôi" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+<Button android:id="@+id/refresh" android:text="↻" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>
+<TextView android:id="@+id/status" android:text="Đang tải…" android:textColor="@color/muted" android:padding="14dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<androidx.recyclerview.widget.RecyclerView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>

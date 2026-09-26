@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:gravity="center" android:padding="28dp" android:background="@color/bg" android:layout_width="match_parent" android:layout_height="match_parent">
+<TextView android:text="ThinkChat" android:textColor="@color/text" android:textSize="34sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+<TextView android:text="Native Android" android:textColor="@color/muted" android:textSize="14sp" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+<EditText android:id="@+id/username" android:hint="Tên đăng nhập" android:textColor="@color/text" android:textColorHint="@color/muted" android:singleLine="true" android:inputType="text" android:layout_marginTop="32dp" android:background="@drawable/bg_edit" android:layout_width="match_parent" android:layout_height="52dp"/>
+<EditText android:id="@+id/password" android:hint="Mật khẩu" android:textColor="@color/text" android:textColorHint="@color/muted" android:singleLine="true" android:inputType="textPassword" android:layout_marginTop="12dp" android:background="@drawable/bg_edit" android:layout_width="match_parent" android:layout_height="52dp"/>
+<Button android:id="@+id/login" android:text="Đăng nhập" android:layout_marginTop="18dp" android:layout_width="match_parent" android:layout_height="52dp"/>
+<ProgressBar android:id="@+id/progress" android:visibility="gone" android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+<TextView android:id="@+id/error" android:textColor="@color/danger" android:gravity="center" android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
