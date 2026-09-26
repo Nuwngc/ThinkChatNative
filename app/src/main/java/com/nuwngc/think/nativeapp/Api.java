@@ -11,13 +11,13 @@ public final class Api {
     public static final String BASE="https://thinkchat.id.vn";
     private static SharedPreferences prefs;
     private static final CookieJar jar = new CookieJar() {
-        public synchronized void saveFromResponse(HttpUrl u, List<Cookie> cookies) {
-            for (Cookie c : cookies) if (c.name().equals("sid")) prefs.edit().putString("sid", c.value()).apply();
+        public synchronized void saveFromResponse(HttpUrl u, List<okhttp3.Cookie> cookies) {
+            for (okhttp3.Cookie c : cookies) if (c.name().equals("sid")) prefs.edit().putString("sid", c.value()).apply();
         }
-        public synchronized List<Cookie> loadForRequest(HttpUrl u) {
+        public synchronized List<okhttp3.Cookie> loadForRequest(HttpUrl u) {
             String sid=prefs.getString("sid","");
             if(sid.isEmpty()) return Collections.emptyList();
-            return Collections.singletonList(new Cookie.Builder().name("sid").value(sid).domain(u.host()).path("/").secure().httpOnly().build());
+            return Collections.singletonList(new okhttp3.Cookie.Builder().name("sid").value(sid).domain(u.host()).path("/").secure().httpOnly().build());
         }
     };
     public static OkHttpClient client;
